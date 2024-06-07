@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diák Adatok</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="text-center mb-4 p-2">
+                            <img src="your_logo.png" alt="Gimnázium logó" class="img-fluid">
+                            <h2>Gárdonyi Géza Ciszterci Gimnázium és Kollégium</h2>
+                        </div>
+                        <form action="process.php" method="POST">
+                            <div class="mb-3">
+                                <label for="oktatasi_azonosito" class="form-label">Oktatási azonosító:</label>
+                                <input type="text" class="form-control" id="oktatasi_azonosito" name="oktatasi_azonosito" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="diak_neve" class="form-label">Diák neve:</label>
+                                <input type="text" class="form-control" id="diak_neve" name="diak_neve" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="szulo_neve" class="form-label">Regisztráló szülő neve:</label>
+                                <input type="text" class="form-control" id="szulo_neve" name="szulo_neve" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="szulo_telefonszama" class="form-label">Regisztráló szülő telefonszáma:</label>
+                                <input type="text" class="form-control" id="szulo_telefonszama" name="szulo_telefonszama" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="kepzes_tipus" class="form-label">Képzéstípus / Tagozat kód:</label>
+                                <select class="form-select" id="kepzes_tipus" name="kepzes_tipus" required>
+                                    <option value="">Válasszon képzéstípust...</option>
+                                    <option value="Képzéstípus1">Képzéstípus 1</option>
+                                    <option value="Képzéstípus2">Képzéstípus 2</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="datum" class="form-label">Dátum:</label>
+                                <input type="date" class="form-control" id="datum" name="datum" required>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Küldés</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
